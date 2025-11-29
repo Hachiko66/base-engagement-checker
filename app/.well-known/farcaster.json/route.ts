@@ -1,14 +1,15 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
+    
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
   
   const manifest = {
-    accountAssociation: {
-      header: process.env.ACCOUNT_ASSOCIATION_HEADER || "",
-      payload: process.env.ACCOUNT_ASSOCIATION_PAYLOAD || "",
-      signature: process.env.ACCOUNT_ASSOCIATION_SIGNATURE || ""
-    },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjMwMDQwNSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDVhMWFEZDczNmVEYkVGYUZDODk0M0Q0NkYxZjU5ODNiRGM2MzA1YjUifQ",
+    "payload": "eyJkb21haW4iOiJiYXNlLWVuZ2FnZW1lbnQtY2hlY2tlci52ZXJjZWwuYXBwIn0",
+    "signature": "Mn3+I97TrkBNmQkPBrKo9I4t8lra5Kaxb0taQSWHbAM+wwscPsAtYdtoPSt4ZJfWD7ndiWzsixRn8ppZvHS60Bs="
+},
     frame: {
       version: "1",
       name: "Base Engagement Checker",
